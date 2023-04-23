@@ -40,18 +40,18 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    } else if(validateInput(pilot) === 'Is a Number' || validateInput(copilot) === 'Is a Number' || validateInput(fuelLevel) === 'Not a Number' || validateInput(cargoLevel) === 'Not a Number') {
     alert('Enter valid info for each of the fields!');
    } else {
-    list.style.visablity = "visable";
+    list.style.visablity = 'visable';
     pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
     copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
     }
    
    if(Number(fuelLevel) < 10000){
-    list.style.visablity = "visable";
+    list.style.visablity = 'visable';
     fuelStatus.innerHTML  = 'Fuel level too low for launch';
     launchStatus.innerHTML = 'Shuttle not ready for launch';
     launchStatus.style.color = '#FF0000';
    } else if(Number(cargoLevel) > 10000){
-    list.style.visablity = "visable";
+    list.style.visablity = 'visable';
     cargoStatus.innerHTML  = 'Too much mass for the shuttle to take off';
     launchStatus.innerHTML = 'Shuttle not ready for launch';
     launchStatus.style.color = '#FF0000';
